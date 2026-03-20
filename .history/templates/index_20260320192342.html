@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Explorer Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>CSV Explorer Web App</h1>
+
+        <div class="upload-card">
+            <h2>Upload Your CSV File</h2>
+            <p class="subtitle">
+                Upload a CSV file to preview data, check rows and columns, detect missing values,
+                find duplicate rows, and explore your dataset easily.
+            </p>
+
+            <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+                <input type="file" name="file" accept=".csv" required>
+                <button type="submit">Upload CSV</button>
+            </form>
+
+            <a href="/history" class="history-btn">View Upload History</a>
+        </div>
+    </div>
+
+</body>
+</html>

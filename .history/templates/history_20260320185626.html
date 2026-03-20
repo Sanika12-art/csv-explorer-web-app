@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Upload History{% endblock %}
+
+{% block content %}
+
+<h2>Upload History</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>ID</th>
+        <th>File Name</th>
+        <th>Total Rows</th>
+        <th>Total Columns</th>
+        <th>Upload Time</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
